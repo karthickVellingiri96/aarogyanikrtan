@@ -62,7 +62,7 @@ public class OrderController {
             orderPostResponse.add(orderResponse);
         }
 
-        return new ResponseEntity<>(orderPostResponse, HttpStatus.CREATED);
+        return new ResponseEntity<>(orderPostResponse, HttpStatus.OK);
     }
 
     @GetMapping(path = "/v1/order/{orderId}")
@@ -80,7 +80,7 @@ public class OrderController {
         orderPostResponse.setServices(servicesPostResponse);
         BeanUtils.copyProperties(order, orderPostResponse);
 
-        return new ResponseEntity<>(orderPostResponse, HttpStatus.CREATED);
+        return new ResponseEntity<>(orderPostResponse, HttpStatus.OK);
     }
 
     @PostMapping(path = "/v1/order/approve")

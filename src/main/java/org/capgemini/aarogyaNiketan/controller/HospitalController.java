@@ -40,7 +40,7 @@ public class HospitalController {
             servicesPostResponses.add(s);
         }
         hospitalPostResponse.setServices(servicesPostResponses);
-        return new ResponseEntity<>(hospitalPostResponse, HttpStatus.OK);
+        return new ResponseEntity<>(hospitalPostResponse, HttpStatus.CREATED);
     }
 
     @PatchMapping(path = "/v1/hospital")
