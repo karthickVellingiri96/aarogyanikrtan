@@ -86,9 +86,8 @@ public class HospitalServiceImpl implements HospitalService {
         List<Hospital> hospital = hospitalRepository.findAllByUserId(userId);
         if (!hospital.isEmpty()) {
             return hospital;
-        } else {
-            throw new Exception("No such data present");
         }
+        return new ArrayList<>();
     }
 
     @Override
@@ -96,9 +95,8 @@ public class HospitalServiceImpl implements HospitalService {
         List<Hospital> hospital = hospitalRepository.findAllByLocation(location.trim().toLowerCase());
         if (!hospital.isEmpty()) {
             return hospital;
-        } else {
-            throw new Exception("No such data present");
         }
+        return new ArrayList<>();
     }
 
     @Override
