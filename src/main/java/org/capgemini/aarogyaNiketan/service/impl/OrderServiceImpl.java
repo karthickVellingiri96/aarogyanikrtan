@@ -43,6 +43,7 @@ public class OrderServiceImpl implements OrderService {
         }
         order.setServices(services);
         order.setHospital(hospital);
+        order.setUserId(userHandler.getLoggedInUser().getId());
         return orderRepository.save(order);
     }
 

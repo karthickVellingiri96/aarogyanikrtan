@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class OrderPostRequest {
-    Long userId;
     Long serviceId;
     Long hospitalId;
     Integer noOfServices;
